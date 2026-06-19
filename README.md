@@ -2,9 +2,9 @@
 
 Code companion for
 
-> **Mat-Pref: Training the Reasoning Backbone of Materials Discovery Agents with Verifiable Rewards**
+> **Mat-Pref: Verifiable-Reward Training Improves Compositional Reasoning in Inorganic Materials**
 > Sarrah Mikhail Leung, Taehan Kim, Jeongbin Park.
-> *ACM CAIS 2026 Workshop on AI Agents for Discovery in the Wild.*
+> *ICML 2026 AI4Physics Workshop.*
 > Paper: arXiv:TODO
 
 Mat-Pref is a benchmark of **10,837 ionic-substitution questions** across **11 inorganic structure families**, with every candidate answer backed by a first-principles Materials Project DFT calculation. Three evaluation splits isolate distinct generalization axes:
@@ -17,7 +17,7 @@ Mat-Pref is a benchmark of **10,837 ionic-substitution questions** across **11 i
 
 See the paper for full benchmark construction, training protocol (SFT → GRPO on Qwen3-8B), and per-family results.
 
-## Get the dataset
+## Dataset
 
 The benchmark is released on Hugging Face Datasets:
 
@@ -81,26 +81,13 @@ python training/tinker_eval_llama.py
 
 Hyperparameters are set inline in each training script (matching the values reported in the paper).
 
-## Repository layout
-
-```
-training/       SFT + GRPO + eval scripts (Tinker)
-scripts/        run_baselines.py, generate_traces.py, build_chem_descriptors.py
-```
-
-The dataset-generation pipeline (Materials Project fetch → classify → generate → split → quality) lives in the source tree but is not part of the published surface — the dataset on Hugging Face is the canonical artifact. If you want to regenerate or extend the benchmark, the pipeline source is available in this repo's history.
-
 ## Citation
 
 ```bibtex
 @inproceedings{leung2026matpref,
-  title     = {Mat-Pref: Training the Reasoning Backbone of Materials Discovery Agents with Verifiable Rewards},
+  title     = {Mat-Pref: Verifiable-Reward Training Improves Compositional Reasoning in Inorganic Materials},
   author    = {Leung, Sarrah Mikhail and Kim, Taehan and Park, Jeongbin},
-  booktitle = {ACM CAIS 2026 Workshop on AI Agents for Discovery in the Wild},
+  booktitle = {ICML AI4Physics Workshop},
   year      = {2026},
 }
 ```
-
-## License
-
-MIT — see [`LICENSE`](LICENSE).
