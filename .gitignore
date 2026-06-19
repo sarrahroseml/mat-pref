@@ -1,0 +1,77 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Secrets / local config
+.env
+.env.local
+.claude/settings.local.json
+
+# Repo-specific data and run artifacts (hosted externally)
+data/
+runs/
+figures/
+submission/*.zip
+
+# Paper-specific analysis scripts (not part of the public pipeline)
+analysis/
+
+# Dataset-generation pipeline (dataset is released on HF; keep source local only)
+scripts/01_fetch_materials.py
+scripts/02_classify_families.py
+scripts/03_build_substitution_index.py
+scripts/04_generate_questions.py
+scripts/05_apply_splits.py
+scripts/06_quality_report.py
+scripts/run_pipeline.py
+scripts/validate_template_grouping.py
+scripts/download_checkpoints.py
+
+# mat_pref package internals — only the version-stub __init__.py ships
+src/mat_pref/cache.py
+src/mat_pref/candidates.py
+src/mat_pref/chemenv.py
+src/mat_pref/classify.py
+src/mat_pref/cli.py
+src/mat_pref/config.py
+src/mat_pref/formatting.py
+src/mat_pref/mp_client.py
+src/mat_pref/oxidation.py
+src/mat_pref/quality.py
+src/mat_pref/questions.py
+src/mat_pref/reactions.py
+src/mat_pref/splits.py
+
+# Tests target the gitignored dataset-generation package
+tests/
+
+# Dataset-generation configs (consumed only by the gitignored pipeline stages)
+configs/
+
+# Pickles / binary intermediates
+*.pkl

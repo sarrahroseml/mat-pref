@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mat-pref"
+version = "0.1.0"
+description = "Comparative ionic substitution selection dataset for RLVR training"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Sarrah Mikhail Leung", email = "sarrahrose@berkeley.edu" },
+    { name = "Taehan Kim", email = "terry.kim@berkeley.edu" },
+    { name = "Jeongbin Park", email = "jeongbp@umich.edu" },
+]
+requires-python = ">=3.10"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    # Training + eval against the released benchmark
+    "datasets>=2.18",
+    "huggingface_hub>=0.24",
+    "torch>=2.4",
+    "transformers>=4.55",
+    "peft>=0.14",
+    "accelerate>=1.2",
+    "tinker-cookbook>=0.0.0",
+    # Baselines + trace generation
+    "openai>=1.0",
+    "pymatgen>=2025.1",  # build_chem_descriptors
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "pyarrow",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
