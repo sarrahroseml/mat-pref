@@ -1,12 +1,5 @@
 # mat-pref
 
-Code companion for
-
-> **Mat-Pref: Verifiable-Reward Training Improves Compositional Reasoning in Inorganic Materials**
-> Sarrah Mikhail Leung, Taehan Kim, Jeongbin Park.
-> *ICML 2026 AI4Physics Workshop.*
-> Paper: arXiv:TODO
-
 Mat-Pref is a benchmark of **10,837 ionic-substitution questions** across **11 inorganic structure families**, with every candidate answer backed by a first-principles Materials Project DFT calculation. Three evaluation splits isolate distinct generalization axes:
 
 | Split | Logical Qs | Question instances | Tests |
