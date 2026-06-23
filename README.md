@@ -17,7 +17,7 @@ The benchmark is released on Hugging Face Datasets:
 ```python
 from datasets import load_dataset
 
-ds = load_dataset("sarrahrose/mat-pref")
+ds = load_dataset("agarosegirls/mat-pref")
 ds["test_iid"], ds["test_ood_host"], ds["test_ood_property"]
 ```
 
@@ -26,8 +26,8 @@ Trained checkpoints (LoRA adapters over Qwen3-8B):
 ```python
 from huggingface_hub import snapshot_download
 
-sft_path  = snapshot_download("sarrahrose/mat-pref-qwen3-8b-sft")
-grpo_path = snapshot_download("sarrahrose/mat-pref-qwen3-8b-grpo")
+sft_path  = snapshot_download("agarosegirls/mat-pref-qwen3-8b-sft")
+grpo_path = snapshot_download("agarosegirls/mat-pref-qwen3-8b-grpo")
 ```
 
 ## Install
